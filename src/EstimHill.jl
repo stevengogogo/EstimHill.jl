@@ -1,5 +1,10 @@
 module EstimHill
 
-# Write your package code here.
+include("Model.jl")
+include("Opt.jl")
+include("Sens.jl")
+include("Utils.jl")
 
-end
+
+
+end # module

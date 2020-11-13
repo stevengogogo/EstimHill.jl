@@ -3,7 +3,7 @@ using Documenter
 
 makedocs(;
     modules=[EstimHill],
-    authors="Steven Chiu <stevengogogo4321@gmail.com> and contributors",
+    authors="Shao-Ting Steven Chiu <r07945001@ntu.edu.tw>",
     repo="https://github.com/stevengogogo/EstimHill.jl/blob/{commit}{path}#L{line}",
     sitename="EstimHill.jl",
     format=Documenter.HTML(;
@@ -17,5 +17,5 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/stevengogogo/EstimHill.jl",
+    repo="github.com/stevengogogo/EstimHill.jl.git",
 )
