@@ -1,0 +1,13 @@
+name = "EstimHill"
+uuid = "1b494388-22a0-4032-a23a-b7144a016349"
+authors = ["Steven Chiu <stevengogogo4321@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1.5"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
