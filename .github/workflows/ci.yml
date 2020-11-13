@@ -64,7 +64,7 @@ jobs:
               version: '3'
       - name: Install Python dependencies
         run: |
-          python -m pip install --upgrade pip3
+          python -m pip install --upgrade pip
           pip3 install sympy scipy numpy matplotlib 
           
       - uses: actions/checkout@v2
