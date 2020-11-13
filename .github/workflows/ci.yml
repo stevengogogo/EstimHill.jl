@@ -12,7 +12,6 @@ jobs:
         python-version: [3.8]
         version:
           - '1.5'
-          - 'nightly'
         os:
           - ubuntu-latest
           - macOS-latest
