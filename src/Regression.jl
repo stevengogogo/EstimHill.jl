@@ -45,7 +45,7 @@ end
 =#
 
 
-"
+"""
 Fit model with given x,y data.
 
 # Argument
@@ -56,7 +56,7 @@ Fit model with given x,y data.
 - lb::`Array{1,n}`: lower bound of n inputs
 - ub::`Array{1,n}`: upper bound of n inputs
 - method::`Symbol`: Method of LsqFit. it can be `:forwarddiff` or `:finiteforward`
-"
+"""
 function curve_fit(model_functor, xdata, ydata, p0; method=:forwarddiff)
     model_func =Utils.convert_functor_model(model_functor)
 
@@ -82,9 +82,9 @@ function curve_fit(model_functor, xdata, ydata, p0, lb, ub; method=:forwarddiff)
 end
 
 
-"
+"""
 Check the monotony of a series.
-"
+"""
 function is_monotonous(series)
     is_mono_increase = all(series == accumulate(max,series) )
     is_mono_decrease = all(series == accumulate(min,series) )
@@ -93,7 +93,7 @@ function is_monotonous(series)
 end
 
 
-"
+"""
 Check the mononous of a function with fixed domain.
 
 # Argument
@@ -101,7 +101,7 @@ Check the mononous of a function with fixed domain.
 - domain::`array of 2 numbers`: domain of function.
 - resolution::`float`: resolution of screening
 - reset_step:: `float`: reset resolution if resolution is larger than the domain range
-"
+"""
 function is_monotonous(f, domain; resolution=0.01, reset_step=100.0)
 
 
@@ -113,14 +113,14 @@ function is_monotonous(f, domain; resolution=0.01, reset_step=100.0)
 end
 
 
-"
+"""
 Measure the Effective concentration with given ratio
 
 # Arguement
 - arrayX{Vector}: should be monotonous
 - arrayY{Vector}: should be monotonous
 - EC_ratio{Number}: The effective concentration
-"
+"""
 function measure_EC( arrayX , arrayY , EC_ratio)
 
     if !is_monotonous(arrayX) | !is_monotonous(arrayY)
@@ -142,7 +142,7 @@ function measure_EC( arrayX , arrayY , EC_ratio)
     return threshold_inputs
 end
 
-"Measure Effective concentration with function input and screening resolution."
+"""Measure Effective concentration with function input and screening resolution."""
 function measure_EC(f, domain, EC_ratio, resolution)
     data = Utils.screen_domain(f, domain; resolution=resolution)
 

@@ -1,6 +1,6 @@
-"
+"""
 Measure Local sensitivity, Response coefficient and define fraction of activation
-"
+"""
 
 module Sens
 
@@ -24,7 +24,7 @@ export localSens, responseCoef, actFrac
 end
 
 
-"
+"""
 Local Sensitivity Analysis
 
 Compute the localsensitivity (df/ds) along the input s (number or vector).
@@ -32,7 +32,7 @@ Compute the localsensitivity (df/ds) along the input s (number or vector).
 # Arguments
 - `f::function` : with single input f(s)
 - `s`:: Single number (vector)
-"
+"""
 function localSens(f, s)
     df = derivative(f)
     return df(s)
@@ -50,7 +50,7 @@ function localSens(f, s::Sym)
 end
 
 
-"
+"""
 Response Coefficient
 
 Compute the response coefficient: \$R^{x}_{s} = \\frac{dx}{ds} \\frac{s}{x}\$.
@@ -68,7 +68,7 @@ The result may be fluctuated due to the sinularity point.
 # Reference:
 1. Ferrell, J. E. & Ha, S. H. Ultrasensitivity part I: Michaelian responses and zero-order ultrasensitivity. Trends in Biochemical Sciences 39, 496–503 (2014).
 2. Legewie, S., Blüthgen, N. & Herzel, H. Quantitative analysis of ultrasensitive responses. FEBS J. 272, 4071–4079 (2005).
-"
+"""
 function responseCoef(f, s)
     df = derivative(f)
     return df(s) * s / f(s)
@@ -88,12 +88,12 @@ end
 
 
 
-"
+"""
 Compute `activation fraction` of the stimulation process.
 
 # Reference
 1. Legewie, S., Blüthgen, N. & Herzel, H. Quantitative analysis of ultrasensitive responses. FEBS J. 272, 4071–4079 (2005).
-"
+"""
 actFrac(x, x_basal, x_max) = (x-x_basal) / (x_max - x_basal)
 
 

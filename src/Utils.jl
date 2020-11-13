@@ -42,7 +42,7 @@ function screen_domainSS(f, domain; resolution=0.01, reset_step=100.0)
 end
 
 
-"Screening Domain with given input parameter"
+"""Screening Domain with given input parameter"""
 function screen_domainSS(mutable_functor, input_par::Symbol, domain, u0; resolution=0.01, method=DynamicSS(Rosenbrock23()))
     xdata = Utils.rangeStepsize(domain[1], domain[2], resolution)
     ydata = []

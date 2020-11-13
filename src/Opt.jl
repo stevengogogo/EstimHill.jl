@@ -1,8 +1,8 @@
 @warn "Opt.jl is not compatible with functors. See https://discourse.julialang.org/t/functor-usage-for-optim-jl/45778"
 
-"
+"""
 Optimization module for finding minimum and maximum of given function with single input (f(x))
-"
+"""
 module Opt
 
 using Optim
@@ -26,7 +26,7 @@ end
     summary
 end
 
-"
+"""
 Find minimimum of function within constraint domain
 
 # Argument
@@ -35,7 +35,7 @@ Find minimimum of function within constraint domain
 
 # Return
 - optRes
-"
+"""
 function find_min(f, domain; method=BFGS())
     x_lower, x_upper = domain[1], domain[2]
     res = Optim.optimize(f, x_lower, x_upper, method)
@@ -51,13 +51,13 @@ function find_min(f, domain; method=BFGS())
 end
 
 
-"
+"""
 Find maximum of function within constraint domain
 
 # Argument
 - f::`function`: function with single input. That is f(x) = y
 - domain::`vector{Number, 2}`: searching domain [lower, upper].
-"
+"""
 function find_max(f, domain)
     inv_f(x; f=f) = f(x)*-1.0
     opres_min = find_min(inv_f, domain)

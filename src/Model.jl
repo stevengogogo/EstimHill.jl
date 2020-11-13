@@ -2,7 +2,7 @@ module Model
 
 using Parameters
 
-"Hill function without basal activation"
+"""Hill function without basal activation"""
 @with_kw struct hill
     k
     n
@@ -13,7 +13,7 @@ function (par::hill)(s)
     return s^n / (k^n + s^n )
 end
 
-"Hill function with basal activation"
+"""Hill function with basal activation"""
 @with_kw struct hill_basal
     k
     n
@@ -26,7 +26,7 @@ function (par::hill_basal)(s)
     return x_base + (x_max - x_base)*(s^n/(k^n+s^n))
 end
 
-"Model: Positive Feedback"
+"""Model: Positive Feedback"""
 @with_kw mutable struct positive_feedback
     x= 0.0
     s=0.1
