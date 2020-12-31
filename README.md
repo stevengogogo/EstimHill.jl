@@ -2,8 +2,7 @@
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://stevengogogo.github.io/EstimHill.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://stevengogogo.github.io/EstimHill.jl/dev)
-[![Build Status](https://github.com/stevengogogo/EstimHill.jl/badges/master/pipeline.svg)](https://github.com/stevengogogo/EstimHill.jl/pipelines)
-[![Coverage](https://github.com/stevengogogo/EstimHill.jl/badges/master/coverage.svg)](https://github.com/stevengogogo/EstimHill.jl/commits/master)
+
 [![Build Status](https://travis-ci.com/stevengogogo/EstimHill.jl.svg?branch=master)](https://travis-ci.com/stevengogogo/EstimHill.jl)
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/stevengogogo/EstimHill.jl?svg=true)](https://ci.appveyor.com/project/stevengogogo/EstimHill-jl)
 [![Build Status](https://cloud.drone.io/api/badges/stevengogogo/EstimHill.jl/status.svg)](https://cloud.drone.io/stevengogogo/EstimHill.jl)
