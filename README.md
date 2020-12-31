@@ -2,7 +2,6 @@
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://stevengogogo.github.io/EstimHill.jl/stable)
 [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://stevengogogo.github.io/EstimHill.jl/dev)
-[![Build Status](https://github.com/stevengogogo/EstimHill.jl/workflows/CI/badge.svg)](https://github.com/stevengogogo/EstimHill.jl/actions)
 [![Build Status](https://github.com/stevengogogo/EstimHill.jl/badges/master/pipeline.svg)](https://github.com/stevengogogo/EstimHill.jl/pipelines)
 [![Coverage](https://github.com/stevengogogo/EstimHill.jl/badges/master/coverage.svg)](https://github.com/stevengogogo/EstimHill.jl/commits/master)
 [![Build Status](https://travis-ci.com/stevengogogo/EstimHill.jl.svg?branch=master)](https://travis-ci.com/stevengogogo/EstimHill.jl)
@@ -16,7 +15,7 @@
 
 # Quantitative analysis on ultrasensitivity 
 
-This package implements the amplification method for sensitivity analysis
+Sensitivity analysis with relative amplification method.
 
 
 ## Reference 
