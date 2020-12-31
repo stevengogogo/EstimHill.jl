@@ -15,3 +15,10 @@
 [![ColPrac: Contributor's Guide on Collaborative Practices for Community Packages](https://img.shields.io/badge/ColPrac-Contributor's%20Guide-blueviolet)](https://github.com/SciML/ColPrac)
 
 # Quantitative analysis on ultrasensitivity 
+
+This package implements the amplification method for sensitivity analysis
+
+
+## Reference 
+
+1. Legewie, S., Blüthgen, N. & Herzel, H. Quantitative analysis of ultrasensitive responses. FEBS J. 272, 4071–4079 (2005).
